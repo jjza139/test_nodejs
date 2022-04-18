@@ -1,2 +1,3 @@
-Npm install
-Npm run dev
+1.Npm install
+
+2.Npm run dev
