@@ -1,1 +1,2 @@
-# test_node
+Npm install
+Npm run dev
