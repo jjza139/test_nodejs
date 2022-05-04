@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+    server_test:
+        image: server_test
+        # image: intelligistbackend
+        # build: .
+        container_name: server_test
+        ports:
+            - "9000:80"
+        volumes:
+            - .:/usr/src/app
+            - /mnt/network_drive/platform_server/upload:/app/uploads
+            - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+            #- ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+        restart: always
+        networks:
+            - code-network-dev
+networks:
+    code-network-dev:
+        driver: bridge
+
+
