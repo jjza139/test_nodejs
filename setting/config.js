@@ -8,7 +8,14 @@ const config = {
     database: 'api_itg',
     user: 'root',
     password: 'THREL#Admin',
-  },
+  }, 
+  // mysql: {
+  //   host: '203.154.71.187',
+  //   port: 3306,
+  //   database: 'Astro_new_generation',
+  //   user: 'Ait_dev',
+  //   password: 'rklg;biNf8iy[',
+  // },
   mongo:{
     MONGO_USERNAME:'root',
     MONGO_PASSWORD: 'P@ssw0rd!23',

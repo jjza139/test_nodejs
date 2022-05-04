@@ -5,21 +5,24 @@ const db = require('./setting/db');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 const test = require('./api/test');
+var cors = require('cors')
+app.use(cors())
 app.use(test);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-MongoClient.connect(db.URI, function(err, db) {
-    try{
-        console.log("Mongo Connected!");
-        db.close();
-    }catch(err){
-        console.log(err);
-    }
-});
+// MongoClient.connect(db.URI, function(err, db) {
+//     try{
+//         console.log("Mongo Connected!");
+//         db.close();
+//     }catch(err){
+//         console.log(err);
+//     }
+// });
 
 app.get('/', (req, res) => {
     res.json({ message: 'YeoJ!' });
+    
 });
 
 db.sql.connect(function(err) {
