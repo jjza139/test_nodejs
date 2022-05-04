@@ -22,11 +22,12 @@ COPY . /usr/src/app/
 # RUN apt-get install libsasl2-dev python-dev libldap2-dev libssl-dev
 
 
-ADD start.sh /start.sh
-RUN chmod +x /start.sh
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+# ADD start.sh /start.sh
+# RUN chmod +x /start.sh
+# ADD entrypoint.sh /entrypoint.sh
+# RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/start.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]
+# CMD ["/start.sh"]
+CMD ["node","start"]
 
