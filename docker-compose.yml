@@ -9,7 +9,7 @@ services:
         ports:
             - "9000:80"
         volumes:
-            - .:/usr/src/app
+            # - .:/usr/src/app
             - /mnt/network_drive/platform_server/upload:/app/uploads
             - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
             #- ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
