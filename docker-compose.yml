@@ -1,5 +1,4 @@
 version: '2'
-
 services:
     server_test:
         image: server_test
@@ -9,6 +8,8 @@ services:
         ports:
             - "9000:80"
         volumes:
+            - ./:/app
+            - /app/node_modules
             # - .:/usr/src/app
             - /mnt/network_drive/platform_server/upload:/app/uploads
             - ./supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
