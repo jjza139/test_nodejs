@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 ### install package
 COPY package.json /usr/src/app
 RUN npm install
-
+RUN npm audit
 ### Copy all file to folder
 COPY . /usr/src/app/
 
